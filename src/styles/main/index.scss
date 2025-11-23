@@ -7,9 +7,11 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     user-select: none;
-    padding: 0 10rem;
-
     background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 * {
@@ -33,7 +35,7 @@ li {
 }
 
 .wrapper {
-    width: 100%;
+    width: 80vw;
     height: 100vh;
     min-height: 100vh;
     display: flex;

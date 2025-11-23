@@ -12,9 +12,26 @@ export function Header() {
                 </div>
                 <div className={styles.header_menu}>
                     <ul className={styles.header_menu_navList}>
-                        <li className={styles.header_menu_navList_item}><a href="#"><p>lorem</p></a></li>
-                        <li className={styles.header_menu_navList_item}><a href="#"><p>lorem</p></a></li>
-                        <li className={styles.header_menu_navList_item}><a href="#"><p>lorem</p></a></li>
+                        <li className={styles.header_menu_navList_item}>
+                            <a href="#">
+                                <p>Lorem</p>
+                            </a>
+                        </li>
+                        <li className={styles.header_menu_navList_item}>
+                            <a href="#">
+                                <p>Lorem</p>
+                            </a>
+                        </li>
+                        <li className={styles.header_menu_navList_item}>
+                            <a href="#">
+                                <p>Lorem</p>
+                            </a>
+                        </li>
+                        <li className={styles.header_menu_navList_item}>
+                            <a href="#">
+                                <p>Lorem</p>
+                            </a>
+                        </li>
                     </ul>
                     <Radio />
                 </div>

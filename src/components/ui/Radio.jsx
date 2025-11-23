@@ -1,16 +1,14 @@
 export function Radio() {
-    return (
-        <div class="toggle-switch">
-            <style>
-                {`
+  return (
+    <div class="toggle-switch">
+      <style>
+        {`
                 .toggle-switch {
   position: relative;
   width: 4rem;
   height: 2.5rem;
-  --light: #d8dbe0;
+  --light: #fff;
   --dark: #111;
-  --link: rgb(27, 129, 112);
-  --link-hover: rgb(24, 94, 82);
 }
 
 .switch-label {
@@ -63,11 +61,11 @@ export function Radio() {
   box-shadow: none;
 }
 `}
-            </style>
-            <label class="switch-label">
-                <input type="checkbox" class="checkbox" />
-                <span class="slider"></span>
-            </label>
-        </div>
-    );
+      </style>
+      <label class="switch-label">
+        <input type="checkbox" class="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  );
 }
