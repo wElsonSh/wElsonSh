@@ -1,5 +1,5 @@
-import { Radio } from '@/components/ui/Radio';
 import styles from '@/styles/components/common/Header.module.scss';
+import { Radio } from '/components/ui/Radio';
 
 export function Header() {
     return (

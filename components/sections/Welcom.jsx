@@ -1,5 +1,5 @@
-import { Card } from '@/components/ui/Card';
 import styles from '@/styles/components/sections/Welcom.module.scss';
+import { Card } from '/components/ui/Card';
 
 export function Welcom() {
     return (
