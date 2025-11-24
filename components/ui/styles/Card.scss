@@ -12,9 +12,9 @@
 }
 
 .comic-card {
-    --paper-white: #fff;
-    --primary-yellow: #ffd900;
-    --accent-red: rgba(194, 81, 28, 1);
+    --paper-white: #fffaeb;
+    --primary-yellow: #fdc52c;
+    --accent-red: #58304e;
     --accent-blue: #774069;
     --ink-black: #121212;
     --border-stroke: 0.15em;
@@ -250,6 +250,7 @@
 
 .like-button:hover .action-button-icon {
     fill: var(--paper-white);
+    transform: scale(1.1);
 }
 
 .action-button-icon_tg {
