@@ -3,10 +3,18 @@
     height: calc(100vh - 8rem);
     position: relative;
 
+    // .wavess {
+    //     position: absolute;
+    //     width: 150vw;
+    //     height: fit-content;
+    //     left: -10vw;
+    //     bottom: -1rem;
+    //     z-index: -1;
+    // }
     .waves {
-        position: absolute;
         width: 100vw;
         height: fit-content;
+        position: absolute;
         left: -10vw;
         bottom: -1rem;
         z-index: -1;

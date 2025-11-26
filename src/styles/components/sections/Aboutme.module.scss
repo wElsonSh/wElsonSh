@@ -1,13 +1,18 @@
 .aboutme {
     width: 100%;
-    min-height: 100vh;
     position: relative;
     padding-top: 10rem;
+    box-sizing: border-box;
+
+    @media (max-width:900px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 
     .aboutme_background {
         position: absolute;
-        width: 100vw;
-        height: 100%;
+        width: 200vw;
+        height: calc(100% - 50vh);
         left: -10vw;
         top: 0;
         background-color: #4c3a69;
@@ -16,21 +21,59 @@
 
     .aboutmeContainer {
         width: 100%;
-        height: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+
+        .wavesContainer {
+            width: 100%;
+            height: 50vh;
+            position: relative;
+
+            .waves {
+                position: absolute;
+                width: 150vw;
+                left: -10vw;
+                z-index: 1;
+            }
+        }
 
         .aboutme_title {
             width: 100%;
             height: fit-content;
-            max-height: 50vh;
             display: flex;
             align-items: start;
             gap: 2rem;
             box-sizing: border-box;
 
+            @media (max-width:900px) {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+
             .aboutme_imgContainer {
                 height: 50vh;
-                max-height: 50vh;
                 width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media (max-width:1000px) {
+                    height: 60vh;
+                }
+
+                @media (max-width:900px) {
+                    height: 40vh;
+                    ;
+                }
+
+                @media (max-width:400px) {
+                    height: 30vh;
+                }
 
                 .aboutme_img {
                     width: 80%;
@@ -44,6 +87,23 @@
                         box-shadow 0.2s ease;
                     transform-origin: bottom left;
 
+                    @media (max-width:1100px) {
+                        height: 60%;
+                    }
+
+                    @media (max-width:1000px) {
+                        height: 50%;
+                    }
+
+                    @media (max-width:900px) {
+                        width: 60%;
+                        height: 75%;
+                    }
+
+                    @media (max-width:400px) {
+                        width: 90%;
+                    }
+
                     &:hover {
                         transform: translateY(-0.6em) rotate(2deg);
                         box-shadow: 0.8em 0.8em 0 0.1em #342746;
@@ -52,7 +112,9 @@
                     &::after {
                         content: 'my first project';
                         position: absolute;
-                        width: 40%;
+                        min-width: 40%;
+                        padding: 0.1rem 0.2rem;
+                        box-sizing: border-box;
                         height: 2rem;
                         top: -1rem;
                         left: 4rem;
@@ -67,6 +129,10 @@
                         box-sizing: border-box;
                         color: #fff;
                         font-family: MoskUltra;
+
+                        @media (max-width:550px) {
+                            left: 2rem;
+                        }
                     }
                 }
             }
@@ -81,9 +147,22 @@
                 gap: 2rem;
                 box-sizing: border-box;
 
+                @media (max-width:1200px) {
+                    max-width: 45%;
+                }
+
+                @media (max-width:1000px) {
+                    max-width: 40%;
+                }
+
+                @media (max-width:900px) {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
                 h1 {
                     font-family: MoskUltra;
-                    font-size: 5em;
+                    font-size: clamp(3em, 10vw, 5em);
                     position: relative;
                     overflow: hidden;
 
@@ -108,8 +187,12 @@
 
                 p {
                     font-family: SegoeUI;
-                    font-size: 1.3em;
+                    font-size: clamp(1.1em, 2vw, 1.3em);
                     line-height: 2.5rem;
+
+                    @media (max-width:900px) {
+                        line-height: 2rem;
+                    }
                 }
             }
         }
@@ -117,33 +200,53 @@
         .aboutme_text {
             width: 100%;
             height: fit-content;
-            height: 120vh;
 
             .aboutme_textList {
                 width: 100%;
-                height: 100%;
+                height: fit-content;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
-                gap: 3rem;
+                gap: 7rem;
+
+                @media (max-width:900px) {
+                    gap: 4rem;
+                }
+
+                @media (max-width:500px) {
+                    gap: 2rem;
+                }
 
                 .aboutme_textList_item {
                     width: 100%;
-                    height: 100%;
+                    max-height: 20vh;
+                    height: 20vh;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
 
+                    @media (max-width:900px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        max-height: fit-content;
+                        height: fit-content;
+                    }
+
                     .aboutme_textList_item_decorator {
                         width: 100%;
-                        max-width: 22%;
+                        max-width: 20%;
                         height: 100%;
+
+                        @media (max-width:1200px) {
+                            max-width: 15%;
+                        }
 
                         p {
                             color: #fff;
                             font-family: JenthillDEMO;
-                            font-size: 2em;
+                            font-size: clamp(1.3em, 2vw, 2em);
                             transform: rotate(-3deg);
                         }
                     }
@@ -158,8 +261,17 @@
 
                         .aboutme_textList_item_content_decorator {
                             height: 100%;
-                            width: 15%;
+                            width: 100%;
+                            max-width: 15%;
                             position: relative;
+
+                            @media (max-width:1200px) {
+                                max-width: 20%;
+                            }
+
+                            @media (max-width:900px) {
+                                display: none;
+                            }
 
                             &::after {
                                 content: '';
@@ -167,26 +279,27 @@
                                 width: 100%;
                                 height: 2px;
                                 background-color: #fff;
-                                top: 1rem;
+                                top: 2rem;
                             }
                         }
 
                         .aboutme_textList_item_content_text {
                             max-width: 85%;
                             height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: start;
-                            gap: 1rem;
+                            text-align: start;
+
+                            @media (max-width:900px) {
+                                max-width: 100%;
+                            }
 
                             h1 {
                                 color: #fff;
                                 font-family: MoskUltra;
-                                font-size: 3em;
-                                line-height: 2.5rem;
+                                font-size: clamp(2em, 4vw, 3em);
                                 letter-spacing: 2px;
                                 position: relative;
                                 overflow: hidden;
+                                width: fit-content;
 
                                 &:hover {
                                     &::before {
@@ -210,8 +323,15 @@
                             p {
                                 font-family: SegoeUI;
                                 font-size: 1.3em;
-                                line-height: 2.5rem;
+                                line-height: clamp(2rem, 2vw, 2.5rem);
                                 color: #fff;
+                                font-size: clamp(1.1em, 2vw, 1.3em);
+
+                                @media (max-width:900px) {
+                                    line-height: 2.5rem;
+                                }
+
+
                             }
                         }
                     }
