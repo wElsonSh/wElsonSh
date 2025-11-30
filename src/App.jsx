@@ -9,11 +9,9 @@ function App() {
 
   return (
     <>
-      <div className="wrapper">
-        <Header />
-        <Welcom />
-        <Aboutme />
-      </div>
+      <Header />
+      <Welcom />
+      <Aboutme />
       <Footer />
     </>
   )

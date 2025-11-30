@@ -3,5 +3,34 @@
     height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
-    z-index: -1;
+    z-index: -10;
+    position: sticky;
+    bottom: 0;
+
+    .footerContainer {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .footer_content {
+            width: 50%;
+            height: 45%;
+            background-color: #774069;
+
+            @media (max-width: 800px) {
+                width: 60%;
+            }
+
+            @media (max-width: 700px) {
+                width: 70%;
+            }
+
+            @media (max-width: 600px) {
+                width: 80%;
+            }
+        }
+    }
 }
